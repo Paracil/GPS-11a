@@ -1,0 +1,28 @@
+name: Python CI
+
+on:
+  pull_request: #Executed on pull request events
+    branches:
+      - main
+      - master
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest # SO where is the code executed
+
+    steps:
+      # Checkout the repository into the GitHub Actions runner
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Build the Docker image
+      - name: Build Docker image
+        run: docker build -t gps-11a-ci .
+
+      # Run pylint for code quality checks
+      - name: Run pylint
+        run: docker run --rm gps-11a-ci python -m pylint main.py transform.py test.py
+
+      # Run tests with coverage and enforce a minimum coverage threshold (80%
+      - name: Run tests with coverage
+        run: docker run --rm gps-11a-ci sh -c "python -m coverage run -m unittest discover -s . -p 'test*.py' && python -m coverage report --fail-under=80"
