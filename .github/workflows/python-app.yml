@@ -7,7 +7,8 @@ on:
       - master
 
 jobs:
-  ci:
+  GPS_CI_Pipeline: # Name of the job
+
     runs-on: ubuntu-latest # SO where is the code executed
 
     steps:

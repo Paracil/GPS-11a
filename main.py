@@ -1,27 +1,25 @@
-""" prova de CI/CD"""
+"""Programa de transformacion de texto."""
 import transform
 
-
 def main():
-    """ core del la prova"""
-    string = input("Introdueix un string:")
+    """Muestra un menu y aplica una transformacion."""
+    texto = input("Introduce un texto:")
 
-    print("Quina transformació vols?")
-    print("[1] Text amb tot majuscules")
-    print("[2] Text amb tot minúscuies")
-    print("[3] Text capitalitzat ")
+    print("Que transformacion quieres?")
+    print("[1] Texto en mayusculas")
+    print("[2] Texto en minusculas")
+    print("[3] Texto capitalizado")
 
-    opcio = input("opció escollida: ")
+    opcion = input("Opcion elegida: ")
 
-    if opcio == "1":
-        print(transform.to_upper_case(string))
-    elif opcio == "2":
-        print(transform.to_lower_case(string))
-    elif opcio == "3":
-        print(transform.to_capitalize(string))
+    if opcion == "1":
+        print(transform.to_upper_case(texto))
+    elif opcion == "2":
+        print(transform.to_lower_case(texto))
+    elif opcion == "3":
+        print(transform.to_capitalize(texto))
     else:
-        print("opció no reconegudda")
-
+        print("Opcion no reconocida")
 
 if __name__ == '__main__':
     main()
