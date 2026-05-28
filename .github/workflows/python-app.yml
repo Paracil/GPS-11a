@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  GPS - CI - Pipeline: # Name of the job
+  GPS_CI_Pipeline: # Name of the job
 
     runs-on: ubuntu-latest # SO where is the code executed
 
