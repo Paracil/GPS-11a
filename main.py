@@ -1,6 +1,8 @@
+"""Programa de transformacion de texto."""
 import transform
 
 def main():
+    """Muestra un menu y aplica una transformacion."""
     texto = input("Introduce un texto:")
 
     print("Que transformacion quieres?")

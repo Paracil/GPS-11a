@@ -1,3 +1,5 @@
+"""Funciones auxiliares para transformar texto."""
+
 def to_upper_case(texto):
     """Convierte el texto a mayusculas."""
     return texto.upper()
