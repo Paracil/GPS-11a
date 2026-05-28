@@ -4,7 +4,7 @@ import transform
 
 class TestStringMethods(unittest.TestCase):
     """Casos de prueba para las funciones de texto."""
-    
+
     def test_is_upper(self):
         """Comprueba que el texto pasa a mayusculas."""
         resultado = transform.to_upper_case("hello")
@@ -22,4 +22,3 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-    
